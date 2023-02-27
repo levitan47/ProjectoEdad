@@ -16,20 +16,28 @@ nombreButon.addEventListener("click", function(){
     const respuesta = document.createElement("div");
     respuesta.innerHTML  = `Nombre: ${nombre.value}, edad: ${edad.value}`
     document.body.appendChild(respuesta)
+    nombre.value = ""
+    edad.value = ""
 });
 saludoButton.addEventListener("click", function(){
     const respuesta = document.createElement("div");
     respuesta.innerHTML  = `Hola ${nombre.value}`
     document.body.appendChild(respuesta)
+    nombre.value = ""
+    edad.value = ""
 })
 legalButton.addEventListener("click", function(){
     if(edad.value < 18){
         const respuesta = document.createElement("div");
         respuesta.innerHTML  = `${nombre.value} es menor de edad`
         document.body.appendChild(respuesta)
+        nombre.value = ""
+        edad.value = ""
     }else{
         const respuesta = document.createElement("div");
         respuesta.innerHTML  = `${nombre.value} es mayor de edad`
         document.body.appendChild(respuesta)
+        nombre.value = ""
+        edad.value = ""
     }
 })
