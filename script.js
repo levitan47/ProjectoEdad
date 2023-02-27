@@ -17,12 +17,18 @@ nombreButon.addEventListener("click", function(){
     respuesta.textContent  = `Nombre: ${nombre.value}, edad: ${edad.value}`
     nombre.value = ""
     edad.value = ""
+    nombreButon.disabled = true;
+    saludoButton.disabled = true;
+    legalButton.disabled = true;
 });
 saludoButton.addEventListener("click", function(){
     const respuesta = document.querySelector("#respuesta");
     respuesta.textContent  = `Hola ${nombre.value}`
     nombre.value = ""
     edad.value = ""
+    nombreButon.disabled = true;
+    saludoButton.disabled = true;
+    legalButton.disabled = true;
 })
 legalButton.addEventListener("click", function(){
     if(edad.value < 18){
@@ -30,10 +36,16 @@ legalButton.addEventListener("click", function(){
         respuesta.textContent  = `${nombre.value} es menor de edad`
         nombre.value = ""
         edad.value = ""
+        nombreButon.disabled = true;
+        saludoButton.disabled = true;
+        legalButton.disabled = true;
     }else{
         const respuesta = document.querySelector("#respuesta");
         respuesta.textContent  = `${nombre.value} es mayor de edad`
         nombre.value = ""
-        edad.value = ""                 
+        edad.value = ""      
+        nombreButon.disabled = true;
+        saludoButton.disabled = true;
+        legalButton.disabled = true;           
     }
 })
