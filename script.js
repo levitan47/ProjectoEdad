@@ -13,31 +13,27 @@ function comprobacion() {
     }
 }
 nombreButon.addEventListener("click", function(){
-    const respuesta = document.createElement("div");
-    respuesta.innerHTML  = `Nombre: ${nombre.value}, edad: ${edad.value}`
-    document.body.appendChild(respuesta)
+    const respuesta = document.querySelector("#respuesta");
+    respuesta.textContent  = `Nombre: ${nombre.value}, edad: ${edad.value}`
     nombre.value = ""
     edad.value = ""
 });
 saludoButton.addEventListener("click", function(){
-    const respuesta = document.createElement("div");
-    respuesta.innerHTML  = `Hola ${nombre.value}`
-    document.body.appendChild(respuesta)
+    const respuesta = document.querySelector("#respuesta");
+    respuesta.textContent  = `Hola ${nombre.value}`
     nombre.value = ""
     edad.value = ""
 })
 legalButton.addEventListener("click", function(){
     if(edad.value < 18){
-        const respuesta = document.createElement("div");
-        respuesta.innerHTML  = `${nombre.value} es menor de edad`
-        document.body.appendChild(respuesta)
+        const respuesta = document.querySelector("#respuesta");
+        respuesta.textContent  = `${nombre.value} es menor de edad`
         nombre.value = ""
         edad.value = ""
     }else{
-        const respuesta = document.createElement("div");
-        respuesta.innerHTML  = `${nombre.value} es mayor de edad`
-        document.body.appendChild(respuesta)
+        const respuesta = document.querySelector("#respuesta");
+        respuesta.textContent  = `${nombre.value} es mayor de edad`
         nombre.value = ""
-        edad.value = ""
+        edad.value = ""                 
     }
 })
