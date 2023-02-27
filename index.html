@@ -4,14 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Projecto edad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <input type="text" autocomplete="off" id="nombre">
-    <input type="number" autocomplete="off" id="edad">
-    <button id="nombreButton" disabled>Nombre</button>
-    <button id="saludoButton" disabled>Saludo</button>
-    <button id="legalButton" disabled>Legal?</button>
+<body class="">
+    <div class="border border-black w-[26rem] ml-[36rem] h-[16rem] mt-[5rem] bg-gradient-to-r from-teal-400 to-indigo-400">
+        <div class="flex flex-grow justify-center mt-[1rem]">
+            <div>
+            <p class="font-bold">Nombre:</p>
+            <input class="border border-black w-[10rem] mr-[15px] indent-3 bg-white" id="nombre" type="text" placeholder="Ingrese el nombre">
+            </div>
+            <div>
+            <p class="font-bold">Edad:</p>
+            <input class="border border-black w-[10rem] mb-1 indent-3 bg-white" id="edad" type="text" placeholder="Ingrese la edad">
+            </div>
+        </div>
+        <div class="flex flex-grow mt-[25px] justify-center">
+            <button class="border border-black w-[10rem] mr-[15px] ml-[15px] bg-white" id="nombreButton">Nombre</button>
+            <button class="border border-black w-[10rem] mr-[15px] bg-white" id="saludoButton">Saludo</button>
+            <button class="border border-black w-[10rem] mr-[15px] bg-white" id="legalButton">Legal?</button>
+        </div>
+        <div class="flex justify-center mt-[35px]">
+            <label  class="border border-black w-[20rem] h-[5rem] bg-white"  id="contenedor" type="text">
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
